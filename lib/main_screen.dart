@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animation_helper/screens/explicit_animation_screens/animation_builder_screen.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/positioned_transition_screen.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/rotation_transition_screen.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/size_transition_screen.dart';
@@ -41,6 +42,11 @@ class _MainScreenState extends State<MainScreen> {
                 "Explicit Animation",
                 style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
+              ),
+
+              const NavigationElevatedButton(
+                title: "Animation Builder Transition",
+                screenWidget: AnimationBuilderScreen(),
               ),
 
               const NavigationElevatedButton(
