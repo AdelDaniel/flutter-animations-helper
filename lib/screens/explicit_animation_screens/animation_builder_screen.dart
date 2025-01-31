@@ -46,6 +46,22 @@ class _AnimationBuilderScreenState extends State<AnimationBuilderScreen>
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
+            /// Moon
+            AnimatedBuilder(
+              animation: _controller,
+              builder: (context, child) {
+                return PositionedDirectional(
+                  start: _controller.value * 50,
+                  bottom: _controller.value * 50,
+                  child: const Icon(
+                    CupertinoIcons.moon,
+                    size: 100,
+                  ),
+                );
+              },
+            ),
+
+            /// Star
             Align(
               alignment: Alignment.topLeft,
               child: AnimatedBuilder(
@@ -62,6 +78,7 @@ class _AnimationBuilderScreenState extends State<AnimationBuilderScreen>
               ),
             ),
 
+            /// heart
             Align(
               alignment: Alignment.center,
               child: AnimatedBuilder(
