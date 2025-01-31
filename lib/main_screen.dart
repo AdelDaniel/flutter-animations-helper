@@ -1,0 +1,48 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_align_screen.dart';
+import 'package:flutter_animation_helper/widgets/navigation_elevated_button.dart';
+
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
+  @override
+  State<MainScreen> createState() => _MainScreenState();
+}
+
+class _MainScreenState extends State<MainScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Flutter Animation Helper"),
+        centerTitle: true,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        child: Center(
+          child: ListView(
+            physics: const BouncingScrollPhysics(),
+            children: [
+              /// Implicit Animation
+              Text(
+                "Implicit Animation",
+                style: Theme.of(context).textTheme.headlineMedium,
+                textAlign: TextAlign.center,
+              ),
+              const NavigationElevatedButton(
+                title: "Animated Align",
+                screenWidget: AnimatedAlignScreen(),
+              ),
+
+              /// Explicit Animations
+              Text(
+                "Explicit Animation",
+                style: Theme.of(context).textTheme.headlineMedium,
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

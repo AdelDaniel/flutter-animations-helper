@@ -11,4 +11,3 @@ Helper for Flutter Animation.
 - Ends with Transaction 
 
 
-# flutter-animations-helper
