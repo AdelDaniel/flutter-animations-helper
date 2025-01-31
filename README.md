@@ -11,3 +11,9 @@ Helper for Flutter Animation.
 - Ends with Transaction 
 
 
+
+## Questions
+
+### Vsync 
+- provide the refresh rate of the screen 
+

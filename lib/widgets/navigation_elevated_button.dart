@@ -13,14 +13,17 @@ class NavigationElevatedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => _screenWidget),
-        );
-      },
-      child: Text(_title),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ElevatedButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => _screenWidget),
+          );
+        },
+        child: Text(_title),
+      ),
     );
   }
 }
