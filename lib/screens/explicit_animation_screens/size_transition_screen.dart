@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 /// Don't forget Curve Animation
-/// Sized Box above the builder 
-/// And the center Widget 
+/// Sized Box above the builder
+/// And the center Widget
 class SizeTransitionScreen extends StatefulWidget {
   const SizeTransitionScreen({super.key});
 
@@ -27,8 +27,8 @@ class _SizeTransitionScreenState extends State<SizeTransitionScreen>
     );
 
     _heartAnimation = Tween<double>(
-      begin: 1,
-      end: 0,
+      begin: 0,
+      end: 1,
     ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
 
     _smileAnimation = Tween<double>(
