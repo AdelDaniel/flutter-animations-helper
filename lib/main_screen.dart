@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animation_helper/screens/explicit_animation_screens/animation_builder_screen.dart';
+import 'package:flutter_animation_helper/screens/explicit_animation_screens/animated_builder_screen.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/fade_transition_screen.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/positioned_transition_screen.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/rotation_transition_screen.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/size_transition_screen.dart';
+import 'package:flutter_animation_helper/screens/explicit_animation_screens/tween_animation_builder_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_align_screen.dart';
 import 'package:flutter_animation_helper/widgets/navigation_elevated_button.dart';
 
@@ -27,7 +28,9 @@ class _MainScreenState extends State<MainScreen> {
           child: ListView(
             physics: const BouncingScrollPhysics(),
             children: [
+              ///
               /// Implicit Animation
+              ///
               Text(
                 "Implicit Animation",
                 style: Theme.of(context).textTheme.headlineMedium,
@@ -38,16 +41,37 @@ class _MainScreenState extends State<MainScreen> {
                 screenWidget: AnimatedAlignScreen(),
               ),
 
-              /// Explicit Animations
+              const NavigationElevatedButton(
+                title: "Tween Animation Builder Align",
+                screenWidget: TweenAnimationBuilderScreen(),
+              ),
+
+              ///
+              /// Animations Builder
+              ///
               Text(
-                "Explicit Animation",
+                "Animation Builders ",
                 style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
 
               const NavigationElevatedButton(
-                title: "Animation Builder Transition",
-                screenWidget: AnimationBuilderScreen(),
+                title: "Animated Builder Transition",
+                screenWidget: AnimatedBuilderScreen(),
+              ),
+
+              const NavigationElevatedButton(
+                title: "Tween Animation Builder Transition",
+                screenWidget: TweenAnimationBuilderScreen(),
+              ),
+
+              ///
+              /// Explicit Animations
+              ///
+              Text(
+                "Explicit Animation",
+                style: Theme.of(context).textTheme.headlineMedium,
+                textAlign: TextAlign.center,
               ),
 
               const NavigationElevatedButton(

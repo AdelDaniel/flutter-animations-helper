@@ -3,14 +3,14 @@ import 'dart:math' as math show pi;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class AnimationBuilderScreen extends StatefulWidget {
-  const AnimationBuilderScreen({super.key});
+class AnimatedBuilderScreen extends StatefulWidget {
+  const AnimatedBuilderScreen({super.key});
 
   @override
-  State<AnimationBuilderScreen> createState() => _AnimationBuilderScreenState();
+  State<AnimatedBuilderScreen> createState() => _AnimatedBuilderScreenState();
 }
 
-class _AnimationBuilderScreenState extends State<AnimationBuilderScreen>
+class _AnimatedBuilderScreenState extends State<AnimatedBuilderScreen>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
