@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/positioned_transition_screen.dart';
+import 'package:flutter_animation_helper/screens/explicit_animation_screens/rotation_transition_screen.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/size_transition_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_align_screen.dart';
 import 'package:flutter_animation_helper/widgets/navigation_elevated_button.dart';
@@ -50,6 +51,11 @@ class _MainScreenState extends State<MainScreen> {
               const NavigationElevatedButton(
                 title: "Size Transition",
                 screenWidget: SizeTransitionScreen(),
+              ),
+
+              const NavigationElevatedButton(
+                title: "Rotation Transition",
+                screenWidget: RotationTransitionScreen(),
               ),
             ],
           ),
