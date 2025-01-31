@@ -14,6 +14,10 @@ Helper for Flutter Animation.
 
 ## Questions
 
+
+### AnimationBuilder 
+- Used as a parent for any widget not takes an animation within its parameters 
+
 ### Vsync 
 - provide the refresh rate of the screen 
 
