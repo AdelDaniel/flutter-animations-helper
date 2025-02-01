@@ -9,8 +9,7 @@ class AnimatedContainerScreen extends StatefulWidget {
       _AnimatedContainerScreenState();
 }
 
-class _AnimatedContainerScreenState extends State<AnimatedContainerScreen>
-    with SingleTickerProviderStateMixin {
+class _AnimatedContainerScreenState extends State<AnimatedContainerScreen> {
   IconData _icon = CupertinoIcons.sun_max;
 
   @override
