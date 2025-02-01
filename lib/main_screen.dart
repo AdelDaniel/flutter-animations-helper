@@ -10,6 +10,7 @@ import 'package:flutter_animation_helper/screens/implicit_animation_screens/anim
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_default_text_style_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_opacity_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_padding_screen.dart';
+import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_physical_screen.dart';
 import 'package:flutter_animation_helper/widgets/navigation_elevated_button.dart';
 
 class MainScreen extends StatefulWidget {
@@ -63,6 +64,11 @@ class _MainScreenState extends State<MainScreen> {
               const NavigationElevatedButton(
                 title: "Animated Padding",
                 screenWidget: AnimatedPaddingScreen(),
+              ),
+
+              const NavigationElevatedButton(
+                title: "Animated Physical",
+                screenWidget: AnimatedPhysicalScreen(),
               ),
 
               ///
