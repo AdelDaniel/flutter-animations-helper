@@ -6,6 +6,7 @@ import 'package:flutter_animation_helper/screens/explicit_animation_screens/rota
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/size_transition_screen.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/tween_animation_builder_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_align_screen.dart';
+import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_container_screen.dart';
 import 'package:flutter_animation_helper/widgets/navigation_elevated_button.dart';
 
 class MainScreen extends StatefulWidget {
@@ -42,8 +43,8 @@ class _MainScreenState extends State<MainScreen> {
               ),
 
               const NavigationElevatedButton(
-                title: "Tween Animation Builder Align",
-                screenWidget: TweenAnimationBuilderScreen(),
+                title: "Animated Container",
+                screenWidget: AnimatedContainerScreen(),
               ),
 
               ///
