@@ -14,6 +14,7 @@ import 'package:flutter_animation_helper/screens/implicit_animation_screens/anim
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_physical_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_position_directional_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_position_screen.dart';
+import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_switcher_screen.dart';
 import 'package:flutter_animation_helper/widgets/navigation_elevated_button.dart';
 
 class MainScreen extends StatefulWidget {
@@ -87,6 +88,11 @@ class _MainScreenState extends State<MainScreen> {
               const NavigationElevatedButton(
                 title: "Animated Cross Fade",
                 screenWidget: AnimatedCrossFadeScreen(),
+              ),
+
+              const NavigationElevatedButton(
+                title: "Animated Switcher",
+                screenWidget: AnimatedSwitcherScreen(),
               ),
 
               ///
