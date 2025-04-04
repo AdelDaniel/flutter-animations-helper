@@ -7,6 +7,7 @@ import 'package:flutter_animation_helper/screens/explicit_animation_screens/size
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/tween_animation_builder_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_align_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_container_screen.dart';
+import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_cross_fade_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_default_text_style_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_opacity_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_padding_screen.dart';
@@ -81,6 +82,11 @@ class _MainScreenState extends State<MainScreen> {
               const NavigationElevatedButton(
                 title: "Animated Position Directional",
                 screenWidget: AnimatedPositionDirectionalScreen(),
+              ),
+
+              const NavigationElevatedButton(
+                title: "Animated Cross Fade",
+                screenWidget: AnimatedCrossFadeScreen(),
               ),
 
               ///
