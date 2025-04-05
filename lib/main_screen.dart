@@ -9,6 +9,7 @@ import 'package:flutter_animation_helper/screens/implicit_animation_screens/anim
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_container_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_cross_fade_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_default_text_style_screen.dart';
+import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_list_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_opacity_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_padding_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_physical_screen.dart';
@@ -93,6 +94,11 @@ class _MainScreenState extends State<MainScreen> {
               const NavigationElevatedButton(
                 title: "Animated Switcher",
                 screenWidget: AnimatedSwitcherScreen(),
+              ),
+
+              const NavigationElevatedButton(
+                title: "Animated List",
+                screenWidget: AnimatedListScreen(),
               ),
 
               ///
