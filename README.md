@@ -1,6 +1,10 @@
 # flutter_animation_helper
-
 Helper for Flutter Animation.
+
+
+## Source
+https://www.udemy.com/course/flutter-animations-from-zero-to-hero/
+
 
 
 ## Implicit Animations  
