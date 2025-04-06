@@ -36,6 +36,12 @@ class _DefaultTextStyleScreenState extends State<DefaultTextStyleScreen>
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
