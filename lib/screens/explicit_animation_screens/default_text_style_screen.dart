@@ -39,7 +39,7 @@ class _DefaultTextStyleScreenState extends State<DefaultTextStyleScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Positioned Transition Screen'),
+        title: const Text('Default Transition Screen'),
       ),
       body: InkWell(
         onTap: () {
