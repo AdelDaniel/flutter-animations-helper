@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/animated_builder_screen.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/default_text_style_screen.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/fade_transition_screen.dart';
+import 'package:flutter_animation_helper/screens/explicit_animation_screens/indexed_stack_screen.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/positioned_transition_screen.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/rotation_transition_screen.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/size_transition_screen.dart';
@@ -153,6 +154,11 @@ class _MainScreenState extends State<MainScreen> {
               const NavigationElevatedButton(
                 title: "Default Text Style Transition",
                 screenWidget: DefaultTextStyleScreen(),
+              ),
+
+              const NavigationElevatedButton(
+                title: "Indexed Stack Transition",
+                screenWidget: IndexedStackScreen(),
               ),
             ],
           ),
