@@ -192,6 +192,13 @@ class _MainScreenState extends State<MainScreen> {
               ),
 
               NavigationElevatedButton.customRoute(
+                title: " Scale Scale Transition && Fade Builder",
+                buttonType: ButtonType.pageTransation,
+                route: () =>
+                    PageTransations.getScaleFadePageTransiton(const PageTwo()),
+              ),
+
+              NavigationElevatedButton.customRoute(
                 title: "Fade Page Transition",
                 buttonType: ButtonType.pageTransation,
                 route: () =>
