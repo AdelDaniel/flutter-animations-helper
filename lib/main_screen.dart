@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animation_helper/pages_transactions/fade_page_transation.dart';
+import 'package:flutter_animation_helper/pages_transactions/page_transations.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/animated_builder_screen.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/default_text_style_screen.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/fade_transition_screen.dart';
@@ -19,7 +19,7 @@ import 'package:flutter_animation_helper/screens/implicit_animation_screens/anim
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_position_directional_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_position_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_switcher_screen.dart';
-import 'package:flutter_animation_helper/screens/page_two.dart';
+import 'package:flutter_animation_helper/pages_transactions/page_two.dart';
 import 'package:flutter_animation_helper/widgets/navigation_elevated_button.dart';
 
 class MainScreen extends StatefulWidget {
@@ -182,6 +182,9 @@ class _MainScreenState extends State<MainScreen> {
                 buttonType: ButtonType.explicitAnimation,
               ),
 
+              ///
+              /// Page Transation
+              ///
               Text(
                 "Fade Transition Pages ",
                 style: Theme.of(context).textTheme.headlineMedium,
@@ -191,7 +194,15 @@ class _MainScreenState extends State<MainScreen> {
               NavigationElevatedButton.customRoute(
                 title: "Fade Page Transition",
                 buttonType: ButtonType.pageTransation,
-                route: PageFadeTransition(const PageTwo()),
+                route: () =>
+                    PageTransations.getFadePageTransiton(const PageTwo()),
+              ),
+
+              NavigationElevatedButton.customRoute(
+                title: "Scale Page Transition",
+                buttonType: ButtonType.pageTransation,
+                route: () =>
+                    PageTransations.getScalePageTransiton(const PageTwo()),
               ),
             ],
           ),

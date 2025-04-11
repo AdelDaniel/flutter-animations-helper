@@ -24,7 +24,7 @@ class NavigationElevatedButton extends StatelessWidget {
     Key? key,
     required String title,
     required ButtonType buttonType,
-    required PageRouteBuilder route,
+    required PageRouteBuilder Function() route,
   }) {
     return NavigationElevatedButton(
       key: key,
@@ -38,7 +38,7 @@ class NavigationElevatedButton extends StatelessWidget {
   final String _title;
   final Widget _screenWidget;
   final ButtonType _buttonType;
-  final PageRouteBuilder? route;
+  final PageRouteBuilder Function()? route;
 
   @override
   Widget build(BuildContext context) {
@@ -52,9 +52,9 @@ class NavigationElevatedButton extends StatelessWidget {
           ),
         ),
         onPressed: () {
-          Navigator.push(
-            context,
-            route ?? MaterialPageRoute(builder: (context) => _screenWidget),
+          Navigator.of(context).push(
+            route?.call() ??
+                MaterialPageRoute(builder: (context) => _screenWidget),
           );
         },
         child: Text(
