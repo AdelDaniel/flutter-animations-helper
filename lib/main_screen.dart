@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animation_helper/pages_transactions/fade_page_transation.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/animated_builder_screen.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/default_text_style_screen.dart';
 import 'package:flutter_animation_helper/screens/explicit_animation_screens/fade_transition_screen.dart';
@@ -18,6 +19,7 @@ import 'package:flutter_animation_helper/screens/implicit_animation_screens/anim
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_position_directional_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_position_screen.dart';
 import 'package:flutter_animation_helper/screens/implicit_animation_screens/animated_switcher_screen.dart';
+import 'package:flutter_animation_helper/screens/page_two.dart';
 import 'package:flutter_animation_helper/widgets/navigation_elevated_button.dart';
 
 class MainScreen extends StatefulWidget {
@@ -51,56 +53,67 @@ class _MainScreenState extends State<MainScreen> {
               const NavigationElevatedButton(
                 title: "Animated Align",
                 screenWidget: AnimatedAlignScreen(),
+                buttonType: ButtonType.implicitAnimation,
               ),
 
               const NavigationElevatedButton(
                 title: "Animated Container",
                 screenWidget: AnimatedContainerScreen(),
+                buttonType: ButtonType.implicitAnimation,
               ),
 
               const NavigationElevatedButton(
                 title: "Animated Default Text Style",
                 screenWidget: AnimatedDefaultTextStyleScreen(),
+                buttonType: ButtonType.implicitAnimation,
               ),
 
               const NavigationElevatedButton(
                 title: "Animated Opacity",
                 screenWidget: AnimatedOpacityScreen(),
+                buttonType: ButtonType.implicitAnimation,
               ),
 
               const NavigationElevatedButton(
                 title: "Animated Padding",
                 screenWidget: AnimatedPaddingScreen(),
+                buttonType: ButtonType.implicitAnimation,
               ),
 
               const NavigationElevatedButton(
                 title: "Animated Physical",
                 screenWidget: AnimatedPhysicalScreen(),
+                buttonType: ButtonType.implicitAnimation,
               ),
 
               const NavigationElevatedButton(
                 title: "Animated Positioned",
                 screenWidget: AnimatedPositionScreen(),
+                buttonType: ButtonType.implicitAnimation,
               ),
 
               const NavigationElevatedButton(
                 title: "Animated Position Directional",
                 screenWidget: AnimatedPositionDirectionalScreen(),
+                buttonType: ButtonType.implicitAnimation,
               ),
 
               const NavigationElevatedButton(
                 title: "Animated Cross Fade",
                 screenWidget: AnimatedCrossFadeScreen(),
+                buttonType: ButtonType.implicitAnimation,
               ),
 
               const NavigationElevatedButton(
                 title: "Animated Switcher",
                 screenWidget: AnimatedSwitcherScreen(),
+                buttonType: ButtonType.implicitAnimation,
               ),
 
               const NavigationElevatedButton(
                 title: "Animated List",
                 screenWidget: AnimatedListScreen(),
+                buttonType: ButtonType.implicitAnimation,
               ),
 
               ///
@@ -115,11 +128,13 @@ class _MainScreenState extends State<MainScreen> {
               const NavigationElevatedButton(
                 title: "Animated Builder Transition",
                 screenWidget: AnimatedBuilderScreen(),
+                buttonType: ButtonType.implicitAnimation,
               ),
 
               const NavigationElevatedButton(
                 title: "Tween Animation Builder Transition",
                 screenWidget: TweenAnimationBuilderScreen(),
+                buttonType: ButtonType.implicitAnimation,
               ),
 
               ///
@@ -134,31 +149,49 @@ class _MainScreenState extends State<MainScreen> {
               const NavigationElevatedButton(
                 title: "Positioned Transition",
                 screenWidget: PositionedTransitionScreen(),
+                buttonType: ButtonType.explicitAnimation,
               ),
 
               const NavigationElevatedButton(
                 title: "Size Transition",
                 screenWidget: SizeTransitionScreen(),
+                buttonType: ButtonType.explicitAnimation,
               ),
 
               const NavigationElevatedButton(
                 title: "Rotation Transition",
                 screenWidget: RotationTransitionScreen(),
+                buttonType: ButtonType.explicitAnimation,
               ),
 
               const NavigationElevatedButton(
                 title: "Fade Transition Screen",
                 screenWidget: FadeTransitionScreen(),
+                buttonType: ButtonType.explicitAnimation,
               ),
 
               const NavigationElevatedButton(
                 title: "Default Text Style Transition",
                 screenWidget: DefaultTextStyleScreen(),
+                buttonType: ButtonType.explicitAnimation,
               ),
 
               const NavigationElevatedButton(
                 title: "Indexed Stack Transition",
                 screenWidget: IndexedStackScreen(),
+                buttonType: ButtonType.explicitAnimation,
+              ),
+
+              Text(
+                "Fade Transition Pages ",
+                style: Theme.of(context).textTheme.headlineMedium,
+                textAlign: TextAlign.center,
+              ),
+
+              NavigationElevatedButton.customRoute(
+                title: "Fade Page Transition",
+                buttonType: ButtonType.pageTransation,
+                route: PageFadeTransition(const PageTwo()),
               ),
             ],
           ),
